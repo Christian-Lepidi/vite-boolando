@@ -46,5 +46,6 @@ export default {};
 
 .icons-header {
   color: white;
+  margin: 0 10px;
 }
 </style>

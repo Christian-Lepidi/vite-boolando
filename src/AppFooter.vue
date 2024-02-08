@@ -16,33 +16,35 @@ export default {};
   </footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .footer {
   width: 100%;
   height: 120px;
   background-color: rgb(34, 34, 34);
+}
 
-  .footer-container {
-    width: 80%;
-    height: 120px;
-    margin: auto;
-  }
+.footer-container {
+  width: 80%;
+  height: 120px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  @include alignment();
-  .h4 {
-    font-size: 18px;
-    color: white;
-    margin-bottom: 5px;
-  }
-  .link {
-    text-decoration: none;
-    color: white;
-  }
+.h4 {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 5px;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
 
-  .info {
-    font-size: 18px;
-    color: white;
-    margin-right: 0;
-  }
+.info {
+  font-size: 18px;
+  color: white;
+  margin-right: 0;
 }
 </style>
