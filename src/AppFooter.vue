@@ -30,21 +30,21 @@ export default {};
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
-.h4 {
-  font-size: 18px;
-  color: white;
-  margin-bottom: 5px;
-}
-.link {
-  text-decoration: none;
-  color: white;
-}
+  .h4 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 5px;
+  }
+  .link {
+    text-decoration: none;
+    color: white;
+  }
 
-.info {
-  font-size: 18px;
-  color: white;
-  margin-right: 0;
+  .info {
+    font-size: 18px;
+    color: white;
+    margin-right: 0;
+  }
 }
 </style>
