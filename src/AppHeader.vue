@@ -33,19 +33,18 @@ export default {};
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.text-header {
-  font-size: 20px;
-  color: white;
-}
+  .text-header {
+    font-size: 20px;
+    color: white;
+  }
 
-.logo {
-  height: 40px;
-}
+  .logo {
+    height: 40px;
+  }
 
-.icons-header {
-  color: white;
-  margin: 0 10px;
+  .icons-header {
+    color: white;
+  }
 }
 </style>
