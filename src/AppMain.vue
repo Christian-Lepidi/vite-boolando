@@ -6,4 +6,4 @@ export default {};
   <main></main>
 </template>
 
-<style></style>
+<style scoped></style>
