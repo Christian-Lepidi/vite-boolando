@@ -120,7 +120,11 @@ export default {
     <div class="container">
       <app-card
         v-for="product in products"
-        :frontImage="product[].frontImage"
+        :name="product.name"
+        class="strong"
+        :brand="product.brand"
+        :price="product.price"
+        :frontImage="product.frontImage"
       />
     </div>
   </main>
@@ -131,5 +135,11 @@ export default {
   max-width: 80%;
   margin: 0 auto;
   padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .strong {
+    text-transform: uppercase;
+  }
 }
 </style>
