@@ -14,11 +14,11 @@ export default {
 
 <template>
   <div class="card">
+    <img :src="'./img/' + frontImage" alt="" class="front-image" />
+    <img :src="'./img/' + backImage" alt="" class="back-image" />
     <div>{{ brand }}</div>
     <div>{{ name }}</div>
     <div class="price">{{ price }}</div>
-
-    <img :src="frontImage" alt="" />
   </div>
 </template>
 
@@ -34,19 +34,19 @@ export default {
 .price {
   color: red;
 }
-.cards .front-image {
+.card .front-image {
   display: block;
 }
 
-.cards .back-image {
+.card .back-image {
   display: none;
 }
 
-.cards:hover .front-image {
+.card:hover .front-image {
   display: none;
 }
 
-.cards:hover .back-image {
+.card:hover .back-image {
   display: block;
 }
 </style>
