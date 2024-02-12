@@ -7,6 +7,10 @@ export default {
   },
 
   components: { AppCard },
+
+  props: {
+    products: Array,
+  },
 };
 </script>
 
