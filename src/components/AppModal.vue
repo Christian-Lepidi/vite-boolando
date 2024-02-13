@@ -1,14 +1,24 @@
 <script>
+import { store } from "../store/index";
+
 export default {
   data() {
-    return {};
+    return { store };
+  },
+
+  methods: {
+    closeModal() {
+      store.modal.show = false;
+    },
   },
 };
 </script>
 
 <template>
   <div class="layover">
-    <h1>Sono una modale</h1>
+    <div class="modal">
+      <button class="btn" @click="closeModal()">Close</button>
+    </div>
   </div>
 </template>
 
@@ -27,5 +37,21 @@ export default {
   align-items: center;
   justify-content: center;
   gap: 15px;
+}
+
+.modal {
+  width: 80%;
+  height: 90px;
+  background-color: white;
+  position: relative;
+}
+
+.btn {
+  padding: 10px;
+  background-color: rgb(71, 199, 199);
+  border-radius: 15px;
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
 }
 </style>

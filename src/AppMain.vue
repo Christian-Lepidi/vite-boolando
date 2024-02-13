@@ -1,5 +1,6 @@
 <script>
 import AppCard from "./AppCard.vue";
+import { store } from "./store/index";
 
 export default {
   data() {
@@ -9,13 +10,24 @@ export default {
   props: { products: Array },
 
   components: { AppCard },
+
+  methods: {
+    handleOpenCard() {
+      store.modal.show = true;
+    },
+  },
 };
 </script>
 
 <template>
   <main>
     <div class="container">
-      <app-card v-for="product in products" class="strong" v-bind="product" />
+      <app-card
+        v-for="product in products"
+        @open-card="handleOpenCard"
+        class="strong"
+        v-bind="product"
+      />
     </div>
   </main>
 </template>
