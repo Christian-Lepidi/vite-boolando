@@ -9,13 +9,12 @@ export default {
     price: Number,
     isInFavorites: Boolean,
   },
-emits:["open-card"],
-
+  emits: ["open-card"],
 };
 </script>
 
 <template>
-  <div class="card" @click="$emit("open-card")">
+  <div class="card" @click="$emit('open-card', this.id)">
     <img :src="'./img/' + frontImage" alt="" class="front-image" />
     <img :src="'./img/' + backImage" alt="" class="back-image" />
     <div>{{ brand }}</div>

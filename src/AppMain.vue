@@ -12,7 +12,7 @@ export default {
   components: { AppCard },
 
   methods: {
-    handleOpenCard() {
+    handleOpenCard(productId) {
       store.modal.show = true;
     },
   },
