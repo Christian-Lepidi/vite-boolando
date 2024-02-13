@@ -3,12 +3,10 @@ import AppCard from "./AppCard.vue";
 
 export default {
   data() {
-    return {
-      products: [],
-    };
+    return {};
   },
 
-  props: Array,
+  props: { products: Array },
 
   components: { AppCard },
 };
@@ -17,15 +15,7 @@ export default {
 <template>
   <main>
     <div class="container">
-      <app-card
-        v-for="product in products"
-        :name="product.name"
-        class="strong"
-        :brand="product.brand"
-        :price="product.price"
-        :frontImage="product.frontImage"
-        :backImage="product.backImage"
-      />
+      <app-card v-for="product in products" class="strong" v-bind="product" />
     </div>
   </main>
 </template>

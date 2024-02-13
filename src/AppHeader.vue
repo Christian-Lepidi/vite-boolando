@@ -6,7 +6,7 @@ export default {};
   <header class="header">
     <div class="header-container">
       <span class="text-header">donna uomo bambini</span>
-      <img src="./img/boolean-logo.png" alt="" class="logo" />
+      <img src="../public/img/boolean-logo.png" alt="" class="logo" />
       <div class="icons-header">
         <i class="far fa-user"></i>
         <i class="far fa-heart"></i>

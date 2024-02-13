@@ -5,6 +5,7 @@ import axios from "axios";
 import AppHeader from "./AppHeader.vue";
 import AppMain from "./AppMain.vue";
 import AppFooter from "./AppFooter.vue";
+import AppModal from "./components/AppModal.vue";
 
 export default {
   data() {
@@ -14,7 +15,7 @@ export default {
     };
   },
 
-  components: { AppHeader, AppMain, AppFooter },
+  components: { AppHeader, AppMain, AppFooter, AppModal },
 
   created() {
     axios.get(`${store.apiUrl}/products`).then((resp) => {
@@ -26,6 +27,7 @@ export default {
 
 <template>
   <app-header></app-header>
+  <app-modal v-if="store.modal.show"></app-modal>
   <app-main :products="products"></app-main>
   <app-footer></app-footer>
 </template>
