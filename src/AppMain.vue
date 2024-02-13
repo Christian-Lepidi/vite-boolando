@@ -1,17 +1,16 @@
 <script>
 import AppCard from "./AppCard.vue";
-import { store } from "./store";
 
 export default {
   data() {
-    return {};
+    return {
+      products: [],
+    };
   },
+
+  props: Array,
 
   components: { AppCard },
-
-  props: {
-    products: Array,
-  },
 };
 </script>
 

@@ -1,4 +1,5 @@
 <script>
+import { store } from "./store/index";
 import axios from "axios";
 
 import AppHeader from "./AppHeader.vue";
@@ -8,6 +9,7 @@ import AppFooter from "./AppFooter.vue";
 export default {
   data() {
     return {
+      store,
       products: [],
     };
   },
@@ -15,7 +17,7 @@ export default {
   components: { AppHeader, AppMain, AppFooter },
 
   created() {
-    axios.get("http://localhost:3000/products").then((resp) => {
+    axios.get(`${store.apiUrl}/products`).then((resp) => {
       this.products = resp.data;
     });
   },
